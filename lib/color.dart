@@ -7,7 +7,7 @@ class MyColor{
   static const Color yellow = Colors.yellow;
   static const Color white = Colors.white;
   static const Color black = Colors.black;
-  static const Color grey = Colors.grey;
+  static const Color grey = Color(0xFFEEEEEE);
   static final greyDark = Color(0xFFA5A5A5);
   static const Color transparent = Colors.transparent;
 }

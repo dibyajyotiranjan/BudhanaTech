@@ -1,3 +1,4 @@
+import 'package:dibyajyoti_technical_task/color.dart';
 import 'package:dibyajyoti_technical_task/screen/home.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.light,
       theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.white,
         fontFamily: 'Inter'
       ),
       home: CabtoHome(),

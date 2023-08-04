@@ -18,11 +18,19 @@ class OutStation extends StatelessWidget {
           Container(
 
             width: double.infinity,
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
-             // color: Colors.yellow,
+              color: MyColor.white,
               border: Border.all(color: MyColor.black),
-              borderRadius: BorderRadius.circular(13)
+              borderRadius: BorderRadius.circular(13),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.shade600,
+                  blurRadius: 5,
+                  spreadRadius: 1,
+                  // offset: Offset(4,4)
+                )
+              ],
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,

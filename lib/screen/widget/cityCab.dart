@@ -15,20 +15,23 @@ class CityCab extends StatelessWidget {
       child: Column(
         children: [
           Container(
-
-            width: double.infinity,
-            padding: EdgeInsets.all(10),
+            margin: EdgeInsets.all(15),
             decoration: BoxDecoration(
-              // color: Colors.yellow,
+              color: MyColor.white,
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.grey.shade600,
+                      blurRadius: 5,
+                      spreadRadius: 1,
+                     // offset: Offset(4,4)
+                  )
+                ],
                 border: Border.all(color: MyColor.black),
-                borderRadius: BorderRadius.circular(13)
+      borderRadius: BorderRadius.circular(13),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Find_Destination(),
-              ],
-            ),
+            width: double.infinity,
+            padding: EdgeInsets.all(20),
+            child: Find_Destination(),
           ),
           SizedBox(height: 50,),
           Container(

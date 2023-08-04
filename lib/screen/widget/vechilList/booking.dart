@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 import '../../../color.dart';
 
-class Select_Trip extends StatefulWidget {
-  const Select_Trip({super.key});
+class Book_vechil extends StatefulWidget {
+  const Book_vechil({super.key});
 
   @override
-  State<Select_Trip> createState() => _Select_TripState();
+  State<Book_vechil> createState() => _Select_TripState();
 }
 
-class _Select_TripState extends State<Select_Trip> {
+class _Select_TripState extends State<Book_vechil> {
   bool sh_return_tik =false;
   bool sh_return_Date =false;
   @override
@@ -33,18 +33,18 @@ class _Select_TripState extends State<Select_Trip> {
                   },
                   style: TextButton.styleFrom(
                     side: BorderSide(
-                        color: MyColor.grey,
-                        width: 2
+                        color: MyColor.greyDark,
+                        width: 4
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
                     primary: MyColor.black,
-                    backgroundColor: sh_return_tik?Colors.grey:null,
+                    backgroundColor: sh_return_tik?Colors.grey:MyColor.white,
 
                   ),
                   icon: sh_return_tik?Icon(Icons.check):SizedBox(),
-                  label:Text("One-Way",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700),)
+                  label:Text("Book For MySelf",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700),)
               ),
             ),
             SizedBox(width: 50,),
@@ -59,15 +59,15 @@ class _Select_TripState extends State<Select_Trip> {
                   });
                 },
                 icon: sh_return_Date?Icon(Icons.check):SizedBox(),
-                label:Text("Round-trip",style: TextStyle(fontSize: 18),),
+                label:Text("Book For Other",style: TextStyle(fontSize: 18),),
                 style: TextButton.styleFrom(
                   side: BorderSide(
-                      color: MyColor.grey,
+                      color: MyColor.greyDark,
 
-                      width: 2
+                      width: 4
                   ),
                   primary: Colors.black,
-                  backgroundColor: sh_return_Date?Colors.grey:null,
+                  backgroundColor: sh_return_Date?Colors.grey:MyColor.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
@@ -81,21 +81,21 @@ class _Select_TripState extends State<Select_Trip> {
         SizedBox(
           height: 50,
         ),
-        sh_return_Date?ListTile(
-          
-          tileColor: Colors.grey,
-          onTap: (){
-            showDatePicker(
-                context: context,
-                initialDate: DateTime.now(),
-                firstDate: DateTime(2023, 8),
-                lastDate: DateTime(2025)
-            );
-          },
-
-          leading: Icon(Icons.calendar_month),
-          title: Text("Return Date"),
-        ):SizedBox()
+        Container(
+          height: 60,
+          width: double.infinity,
+          child: ElevatedButton(
+            onPressed: (){
+            },
+            child: Text("Book",style: TextStyle(color: MyColor.white,fontSize: 30),),
+            style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                primary: MyColor.black
+            ),
+          ),
+        )
       ],
     );
   }

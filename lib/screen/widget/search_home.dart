@@ -1,26 +1,21 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../color.dart';
+import '../../color.dart';
 
-class Find_Destination extends StatefulWidget {
-  const Find_Destination({super.key});
+class Search extends StatefulWidget {
+  const Search({super.key});
 
   @override
-  State<Find_Destination> createState() => _Find_DestinationState();
+  State<Search> createState() => _SearchState();
 }
 
-class _Find_DestinationState extends State<Find_Destination> {
+class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-     // margin: EdgeInsets.all(30),
-      decoration: BoxDecoration(
-        color: MyColor.grey,
-
-      ),
-
+      color: MyColor.white,
       alignment: Alignment.center,
       child: TextField(
         textAlign: TextAlign.start,
@@ -30,18 +25,11 @@ class _Find_DestinationState extends State<Find_Destination> {
           prefixIcon: Icon(Icons.search,size: 50,),
           prefixIconColor: Colors.black,
           focusColor: Colors.black,
-          hintText: "Mysuru, Karnataka, India",
+          hintText: "Shreeji residency, Chandlodiya, Ahmeda",
           hintStyle: TextStyle(
 
               fontWeight: FontWeight.bold,
               fontSize: 30
-          ),
-          label: Text("Destination"),
-          //labelText: "Destination",
-          labelStyle: TextStyle(
-            color: MyColor.black,
-            fontSize: 25,
-            // height: 1, // 0,1 - label will sit on top of border
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
